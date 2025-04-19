@@ -24,7 +24,6 @@ class Engine {
     }
 
     gotoScene(sceneClass, data) {
-        console.log(sceneClass);
         this.scene = new sceneClass(this);
         this.scene.create(data);
     }
