@@ -1,0 +1,184 @@
+{
+    "Title": "On the launch day of the new WoW season",
+    "Credits": "Created by Frank Zeng.",
+    "InitialLocation": "Bed",
+    "Locations": {
+        "Bed": {
+            "Body": "You wake up in your bed (where else can you be). The calendar hanging on your wall shows a big red circle on today's date. You realize today is the release day of the new season of your favourite game, World of Warcraft.",
+            "Choices": [
+                {
+                    "Text": "Turn on your PC",
+                    "Target": "PC"
+                }
+            ]
+        },
+        "PC": {
+            "Body": "There are only two icons on your PC's desktop: Discord, and World of Warcraft",
+            "Choices": [
+                {
+                    "Text": "Open Discord",
+                    "Target": "Discord"
+                },
+                {
+                    "Text": "Open World of Warcraft",
+                    "Target": "WOW"
+                },
+                {
+                    "Text": "Turn off your PC and get out",
+                    "Target": "Outside"
+                }
+            ]
+        },
+        "Discord": {
+            "Body": "You opened discord. On the top, you have a group chat named 'Gang of Azeroth', your friends from your class, eager to conquer the up-coming dungeon.",
+            "Choices": [
+                {
+                    "Text": "Tell everyone to hop up in game.",
+                    "Target": "GroupChat",
+                    "Items": ["DPS", "Healer"]
+                },
+                {
+                    "Text": "Close Discord",
+                    "Target": "PC"
+                }
+            ]
+        },
+        "GroupChat": {
+            "Body": "The DPS players and the Healer soon replied, but the Tank is missing. You DM-ed him, but got no response.",
+            "Choices": [
+                {
+                    "Text": "Close Discord",
+                    "Target": "PC"
+                }
+            ]
+        },
+        "WOW": {
+            "Body": "You are now in the latest main city in the world of Azeroth, always nice to be in here.",
+            "Choices": [
+                {
+                    "Text": "Go to the target dummies to practice rotation",
+                    "Target": "Dummy"
+                },
+                {
+                    "Text": "Go to the new dungeon",
+                    "Target": "Dungeon"
+                },
+                {
+                    "Text": "Exit World of Warcraft",
+                    "Target": "PC"
+                }
+            ]
+        },
+        "Dummy": {
+            "Body": "You start practicing your rotation. Looking at the numbers, you feel like you are the best dps in the world.",
+            "Choices": [
+                {
+                    "Text": "Continue practicing",
+                    "Target": "Dummy"
+                },
+                {
+                    "Text": "Get back to the city",
+                    "Target": "WOW"
+                }
+            ]
+        },
+        "Dungeon": {
+            "Requirements": [
+                {
+                    "Key": "DPS",
+                    "Prompt": "You don't have all your DPS yet, you cannot get in the dungeon."
+                },
+                {
+                    "Key": "Tank",
+                    "Prompt": "You don't have your Tank yet, you cannot get in the dungeon."
+                },
+                {
+                    "Key": "Healer",
+                    "Prompt": "You don't have Healer yet, you cannot get in the dungeon."
+                }
+            ],
+            "Back": {
+                    "Text": "Get back to the city",
+                    "Target": "WOW"
+            },
+            "Body": "You gathered all your team members at the Meeting Stone, ready for the conquering the dungeon.",
+            "Choices": [
+                {
+                    "Text": "Enter the dungeon",
+                    "Target": "Finish"
+                }
+            ]
+        },
+        "Outside": {
+            "Body": "You steped out of your home, it's hot out there and you don't want to spend even one more minute out side.",
+            "Choices": [
+                {
+                    "Text": "Go to shop",
+                    "Target": "Shop"
+                },
+                {
+                    "Text": "Go to your friend (the Tank)'s home",
+                    "Target": "TankHome",
+                    "Items": ["Tank"]
+                },
+                {
+                    "Text": "Go back home and turn on PC",
+                    "Target": "PC"
+                }
+            ]
+        },
+        "Shop": {
+            "SpecialLocation": "LocationWithAction",
+            "Body": "You entered the shop.",
+            "Choices": [
+                {
+                    "Text": "Get out",
+                    "Target": "Outside"
+                },
+                {
+                    "Text": "Go to your friend (the Tank)'s home",
+                    "Target": "TankHome"
+                }
+            ],
+            "Actions": [
+                {
+                    "Action": true,
+                    "Text": "Get coke",
+                    "Prompt": "You get a can of coke",
+                    "Items": ["Coke"]
+                },
+                {
+                    "Action": true,
+                    "Text": "Get chips",
+                    "Prompt": "You get a bag of chips",
+                    "Items": ["Chips"]
+                }
+            ]
+        },
+        "TankHome": {
+            "Body": "You went to your Tank's home, now he's awake and is ready for the dungeon.",
+            "Choices": [
+                {
+                    "Text": "Get out",
+                    "Target": "Outside"
+                },
+                {
+                    "Text": "Get back to the city",
+                    "Target": "WOW"
+                }
+            ]
+        },
+        "Finish": {
+            "Body": "You and your team went through all the mobs and bosses, and finally you guys stand in front of the reward chest.",
+            "Choices": [
+                {
+                    "Text": "Open Chest",
+                    "Target": "Chest"
+                }
+            ]
+        },
+        "Chest": {
+            "Body": "With the all excitement you opened the chest, meaning that you guys finish the dungeon!"
+        }
+    }
+}

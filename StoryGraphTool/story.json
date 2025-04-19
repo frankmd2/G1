@@ -1,0 +1,72 @@
+{
+  "Title": "Campus Life on RDFZ",
+  "Credits": "Created by Frank Zeng",
+  "InitialLocation": "East Gate",
+  "Locations": {
+    "East Gate": {
+      "Body": "This is East Gate, the main gate of RDFZ.",
+      "Choices": [
+        {
+          "Text": "West",
+          "Target": "Yifu Building"
+        }
+      ]
+
+    },
+    "Yifu Building": {
+      "Body": "This is Yifu Building, where first and second year high school students study.",
+      "Choices": [
+        {
+          "Text": "East",
+          "Target": "East Gate"
+        },
+        {
+          "Text": "West",
+          "Target": "High school Building"
+        }
+      ]
+    },
+    "High school Building": {
+      "Body": "This is High school Building, where 3rd year middle school students and 3rd year high schools student prepare for their upcoming exams.",
+      "Choices": [
+        {
+          "Text": "East",
+          "Target": "Yifu Building"
+        },
+        {
+          "Text": "West",
+          "Target": "ICC"
+        }
+      ]
+    },
+    "ICC": {
+      "Body": "This is ICC building, where international students study for college application.",
+      "Choices": [
+        {
+          "Text": "East",
+          "Target": "Highschool Building"
+        },
+        {
+          "Text": "West",
+          "Target": "Middle school Building"
+        }
+      ]
+    },
+    "Middle school Building": {
+      "Body": "This is Middle school Building, where first and second year middle school students study.",
+      "Choices": [
+        {
+          "Text": "East",
+          "Target": "ICC"
+        },
+        {
+          "Text": "West",
+          "Target": "North Gate"
+        }
+      ]
+    },
+    "North Gate": {
+      "Body": "The North Gate, less popular but still has a lot of traffic. Thanks for visiting!"
+    }
+  }
+}
