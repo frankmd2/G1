@@ -145,12 +145,14 @@
                     "Action": true,
                     "Text": "Get coke",
                     "Prompt": "You get a can of coke",
+                    "Target": "Shop",
                     "Items": ["Coke"]
                 },
                 {
                     "Action": true,
                     "Text": "Get chips",
                     "Prompt": "You get a bag of chips",
+                    "Target": "Shop",
                     "Items": ["Chips"]
                 }
             ]

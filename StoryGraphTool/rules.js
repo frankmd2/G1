@@ -11,11 +11,11 @@ class Start extends Scene {
 }
 
 class Location extends Scene {
+
     create(key) {
         let locationData = this.engine.storyData.Locations[key];
 
         //console.log(Object.keys(this.engine.inventory));
-
         if ("Requirements" in locationData) {
             let has_requirements = true;
             //console.log(typeof locationData.Requirements);
@@ -56,15 +56,14 @@ class Location extends Scene {
 
             if ("Action" in choice) {
                 this.engine.show(choice.Prompt);
-                return;
             }
 
-            //console.log(this.engine.storyData.Locations[choice.Target]);
             if ("SpecialLocation" in this.engine.storyData.Locations[choice.Target]) {
-                console.log(this.engine.storyData.Locations[choice.Target].SpecialLocation);
-                this.engine.gotoScene(this.engine.storyData.Locations[choice.Target].SpecialLocation, choice.Target);
+                this.engine.gotoScene(LocationWithAction, choice.Target);
             }
-            this.engine.gotoScene(Location, choice.Target);
+            else{
+                this.engine.gotoScene(Location, choice.Target);
+            }
         } else {
             this.engine.gotoScene(End);
         }
